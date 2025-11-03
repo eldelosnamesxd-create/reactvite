@@ -10,7 +10,7 @@ export default function TelegramReg() {
             sessionStorage.setItem("token", token);
             window.location.href = "/";
         }else{
-            alert("Ошибка регистрации");
+            alert("Ошибка регистрации: "+queryParams);
             window.location.href = "/";
         }
     }, [])
