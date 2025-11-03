@@ -1,7 +1,7 @@
 import "./login.css";
 import { useState } from "react";
 import apiClient from "../../services/apiClient";
-import TelegramLogin from './telegramlog';
+import TelegramLoginButton from './telegramlog';
 export default function Login() {
     const [accessKey, setAccessKey] = useState("");
     const login = async () => {
@@ -32,7 +32,7 @@ export default function Login() {
                 <p>Inicia sesión con Telegram</p>
             </div>
 
-            <TelegramLogin />
+            <TelegramLoginButton />
 
             <div className="form-footer">
                 Tu número de teléfono permanece oculto.
