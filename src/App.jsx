@@ -14,8 +14,6 @@ import TelegramReg from "./pages/telegramreg/telegramreg";
 import BannedPage from "./pages/ban/ban";
 import Amazonchk from "./pages/checker/amazonCHK";
 
-import Loginnew from "./pages/login/otlog/login";
-
 import "./App.css";
 import "./gencss/bootstrap.min.css";
 import "./gencss/icons.min.css";
@@ -119,7 +117,7 @@ function App() {
             <Route path="/telegram" element={<Telegram userdata={userdata} />} />
             <Route path="/historial" element={<Historial />} />
 
-            <Route path="/telegram/register" element={<Loginnew userdata={userdata} />} />
+            <Route path="/telegram/register" element={<TelegramReg userdata={userdata} />} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>
