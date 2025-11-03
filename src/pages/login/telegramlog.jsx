@@ -1,3 +1,4 @@
+import React, { useEffect, useRef } from 'react';
 export default function TelegramLoginButton(){
   const ref = useRef(null);
 
