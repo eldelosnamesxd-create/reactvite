@@ -5,7 +5,7 @@ export default function TelegramReg() {
     const status = queryParams.get('status');
 
     useEffect(() => {
-        if (status === true) {
+        if (status === true || status === "true") {
             alert("Вы успешно зарегистрировались в телеграмм боте");
             sessionStorage.setItem("token", token);
             window.location.href = "/";
