@@ -6,11 +6,9 @@ export default function TelegramReg() {
 
     useEffect(() => {
         if (status === true || status === "true") {
-            alert("Вы успешно зарегистрировались в телеграмм боте");
             sessionStorage.setItem("token", token);
             window.location.href = "/";
         }else{
-            alert("Ошибка регистрации: "+queryParams);
             window.location.href = "/";
         }
     }, [])
