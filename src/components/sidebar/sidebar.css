@@ -1,0 +1,148 @@
+﻿.sidebar.open {
+    left: 0;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: #03314D;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 767px) {
+    .sidebar {
+        width: 280px;
+        left: -280px;
+    }
+}
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.sidebar-overlay.show {
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .sidebar {
+        width: 280px;
+        left: -280px;
+    }
+
+    .sidebar.open+.sidebar-toggle {
+        left: 295px;
+    }
+
+    .sidebar-toggle {
+        top: 15px;
+        left: 15px;
+    }
+}
+
+
+.sidebar-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #03314D;
+    border: none;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1001;
+    transition: all 0.3s ease;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-toggle:hover {
+    background: #02283a;
+    transform: scale(1.1);
+}
+
+.sidebar.open+.sidebar-toggle {
+    left: 270px;
+    background: #02283a;
+}
+
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 80px 0 0 0;
+    overflow: hidden;
+}
+
+.sidebar-menu li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-menu a,.sidebar-menu p  {
+    display: block;
+    padding: 15px 20px;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.sidebar-menu a:hover, .sidebar-menu p:hover,
+.sidebar-menu a.active, .sidebar-menu p.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding-left: 25px;
+}
+
+.sidebar-menu .dropdown-menu {
+    background: #02283a;
+    border: none;
+    padding: 0;
+    display: none;
+}
+
+.sidebar-menu .dropdown-item {
+    color: rgba(255, 255, 255, 0.85);
+    padding: 12px 20px 12px 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 14px;
+}
+
+.sidebar-menu .dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding-left: 45px;
+}
+
+.sidebar-menu .dropdown-divider {
+    border-color: rgba(255, 255, 255, 0.1);
+    margin: 0;
+}
+
+.sidebar__a{
+width: 100%;
+text-align: left;
+}
+
+.sidevar__divs{
+    width: 100%;
+}

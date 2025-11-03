@@ -1,0 +1,224 @@
+.custom-card {
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.custom-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-color: #03314D;
+}
+
+.custom-card-header {
+    background: linear-gradient(135deg, #03314D 0%, #02283a 100%);
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.custom-card-title {
+    color: white;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.custom-card-body {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(21 46 77);
+    align-items: flex-start;
+}
+
+.custom-card-body p {
+    color: white;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    flex-grow: 1;
+    margin: 0px;
+    margin-bottom: 15px;
+}
+
+.custom-card-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.custom-card-list li {
+    padding: 8px 0;
+    color: #555;
+    position: relative;
+    padding-left: 20px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+}
+
+.custom-card-list li:last-child {
+    border-bottom: none;
+}
+
+.custom-card-list li::before {
+    content: '✓';
+    color: #03314D;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.custom-card-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.stat {
+    background: #f8f9fa;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #03314D;
+    border: 1px solid #e0e0e0;
+}
+
+.custom-card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.custom-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 80px;
+    text-align: center;
+}
+
+.custom-btn.primary {
+    background: #03314D;
+    color: white;
+}
+
+.custom-btn.primary:hover {
+    background: #02283a;
+    transform: translateY(-1px);
+}
+
+.custom-btn.secondary {
+    background: #f8f9fa;
+    color: #03314D;
+    border: 1px solid #03314D;
+}
+
+.custom-btn.secondary:hover {
+    background: #e9ecef;
+}
+
+.custom-card-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.status {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status.active {
+    color: #28a745;
+}
+
+.status-time {
+    font-size: 12px;
+    color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .custom-card-header {
+        padding: 12px 15px;
+    }
+
+    .custom-card-body {
+        padding: 15px;
+    }
+
+    .custom-card-title {
+        font-size: 15px;
+    }
+
+    .custom-card-actions {
+        flex-direction: column;
+    }
+
+    .custom-btn {
+        flex: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .custom-card {
+        margin-bottom: 15px;
+    }
+
+    .custom-card-header {
+        padding: 10px 15px;
+    }
+
+    .custom-card-body {
+        padding: 12px;
+    }
+
+    .custom-card-stats {
+        flex-direction: column;
+    }
+}
+
+#cardscont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-header:first-child {
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+}
+
+.align-items-center {
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+}
+
+.justify-content-between {
+    -webkit-box-pack: justify !important;
+    -ms-flex-pack: justify !important;
+    justify-content: space-between !important;
+}
+
+.d-flex {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
