@@ -1,7 +1,7 @@
 ﻿import { useEffect } from 'react';
 import './sidebar.css';
 
-export default function Sidebar() {
+export default function Sidebar({userdata}) {
     useEffect(() => {
         function toggleSubmenu(event, element) {
             event.preventDefault();
@@ -81,7 +81,6 @@ export default function Sidebar() {
         closeSidebar();
     };
 
-    let admin = true;
 
     const eliminarToken = async () => {
         sessionStorage.removeItem('token');
@@ -103,7 +102,7 @@ export default function Sidebar() {
                         <div>
                             <a href="/" className="active sidebar__a">Dashboard</a>
                         </div>
-                        {admin ? <div><a href="/panel" className="sidebar__a">Panel</a></div> : null}
+                        {userdata?.user?.rango ? <div><a href="/panel" className="sidebar__a">Panel</a></div> : null}
                         <div className='sidevar__divs'>
                             <p style={{ margin: "0px" }} className="sidebar__a">Checker</p>
                             <div style={{ width: "86%", marginLeft: "35px" }}>

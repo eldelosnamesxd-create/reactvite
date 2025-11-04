@@ -102,7 +102,7 @@ function App() {
             </nav>
           )}
 
-          {!excludeLayout && <Sidebar />}
+          {!excludeLayout && <Sidebar userdata={userdata} />}
 
           <Routes>
             <Route path="/" element={<Home userdata={userdata} setUserdata={setUserdata} />} />
